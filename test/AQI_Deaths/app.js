@@ -90,9 +90,10 @@ function handleClick() {
       var bar_data = {
         x: months,
         y: counts,
-        type: 'bar',
+        type: 'line',
+        mode: 'markers',
         orientation: "h",
-        line: { width: 10 }
+        //line: { width: 10 }
       };
 //console.log(level_counts)
       var bar_layout = {
@@ -114,9 +115,9 @@ function handleClick() {
     header = tbl_header.append("th");
     header.text("Year");
     header = tbl_header.append("th");
-    header.text("Respiratory Deaths");
+    header.text("Month");
     header = tbl_header.append("th");
-    header.text("Months");
+    header.text("Death Count");
 
     yearData.map((row) => {
       const tbl_data = tbody.append("tr");
